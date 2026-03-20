@@ -1,46 +1,60 @@
- 
+ import TitleDescription from "./TitleDescription"
+ import Buttons from "./Buttons"
 
 export default function Header(){
     return(
        
-  <div class="banner container">
+  <div className="banner container">
 
-<header class="flex-center myheader">
+<header className="flex-center myheader">
 
-<nav class="navbar">
+<nav className="navbar">
 
-    <div class="navbarlogo">
+    <div className="navbarlogo">
         <a href="#home"><img src="./images/headerlogo.png" alt="logo"/></a>
    </div>
         
    
-    <div class="navbarlinks">
+    <div className="navbarlinks">
         <a href="#home">Home</a>
         <a href="#About">About</a>
         <a href="#services">Services</a>
         <a href="#resourses">Resources</a>
     </div>
 
-    <div class="buttons">
-  <button class="primary-btn ">Explore</button>
-    <button class="secondary-btn ">Learn</button>
+    <div className="buttons">
+       <Buttons
+                   explore="Explore"
+                   learn="Learn"
+                   exploreclassName="primary-btn "
+                   learnclassName="secondary-btn "
+                   />
+  
     </div>
+    
   
  </nav>
 
 </header>
 
  
- <div class="bannercontent">
-
-    <h1 class="banner-heading heading" >Build systems that scale with you</h1>
-    <p class="banner-paragraph paragraph">
-        Mordern business need infrastructure that grows without breaking.We deliver scalable 
-        software and DevOps solutions that handle your demands today and tommarrow.
-    </p>
-     <div class="buttons bannerbuttons" >
-  <button class="primary-btn banner-explore">Explore</button>
-    <button class="secondary-btn banner-learn">Learn</button>
+ <div className="bannercontent">
+              <TitleDescription
+              title="Build systems that scale with you"
+              description="Mordern business need infrastructure that grows without breaking.We deliver scalable 
+       software and DevOps solutions that handle your demands today and tommarrow."
+              titleclassName="banner-heading heading"
+              descclassName="banner-paragraph paragraph"
+              />
+  
+     <div className="buttons bannerbuttons" >
+        <Buttons
+                   explore="Explore"
+                   learn="Learn"
+                   exploreclassName="primary-btn banner-explore"
+                   learnclassName="secondary-btn banner-learn"
+                   />
+ 
     </div>
 
 
@@ -49,3 +63,10 @@ export default function Header(){
   </div>
     )
 }
+
+  // <h1 className="" ></h1>
+  //   <p className="">
+  //       
+  //   </p>
+  //  <button className=""></button>
+  //   <button className=""></button>
